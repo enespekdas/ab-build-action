@@ -10,7 +10,7 @@ jobs:
   steps:
     - name : First GitHub Custom Action 
       id : myjsaction
-      uses: enespekdas/ab-build@v1.6.1
+      uses: enespekdas/ab-build@v1.6.2
 
   
     - name : Output of the TimeStamp

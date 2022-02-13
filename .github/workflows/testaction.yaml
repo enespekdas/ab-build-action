@@ -11,10 +11,10 @@ jobs:
   steps:
     - name : First GitHub Custom Action 
       id : myjsaction
-      uses: enespekdas/ab-build@v2.0.4
+      uses: enespekdas/ab-build@v2.0.5
       with:
         USERNAME : "${{env.QUAYIO_USERNAME}}"
-  
+        PASSWORD : "${{secrets.QUAYIO_PASSWD}}"  
     - name : env test
       run : echo "env test ediyorum ${{secrets.QUAYIO_PASSWD}}" 
     - name : Output of the TimeStamp

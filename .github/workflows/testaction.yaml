@@ -14,7 +14,15 @@ jobs:
       uses: enespekdas/ab-build@v2.0.4
       with:
         USERNAME : "${{env.QUAYIO_USERNAME}}"
+  
     - name : env test
-      run : echo "env test ediyorum ${{env.QUAYIO_USERNAME}}" 
+      run : echo "env test ediyorum ${{secrets.QUAYIO_PASSWD}}" 
     - name : Output of the TimeStamp
       run : echo "The time was ${{steps.myjsaction.outputs.time}}"
+  
+
+
+  # steps:
+  # - shell: bash
+  #   env:
+  #     SUPER_SECRET: ${{ secrets.SuperSecret }}

@@ -11,7 +11,7 @@ jobs:
   steps:
     - name : First GitHub Custom Action 
       id : myjsaction
-      uses: enespekdas/ab-build@v2.0.3
+      uses: enespekdas/ab-build@v2.0.4
       with:
         USERNAME : "${{env.QUAYIO_USERNAME}}"
     - name : env test

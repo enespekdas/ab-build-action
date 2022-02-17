@@ -11,7 +11,7 @@ jobs:
   steps:
     - name : First GitHub Custom Action 
       id : myjsaction
-      uses: enespekdas/ab-build@v2.1.3
+      uses: enespekdas/ab-build@v2.1.4
       with:
         USERNAME : "${{env.QUAYIO_USERNAME}}"
         PASSWORD : "${{secrets.QUAYIO_PASSWD}}"  

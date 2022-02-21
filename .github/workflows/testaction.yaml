@@ -14,7 +14,7 @@ jobs:
       uses: DevSecOpsCore/core-build@v1.1.2
       with:
         jPath : ""
-        jName : ""  
+        jName : "devops-settings-example.json"  
     
 
 

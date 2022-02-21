@@ -13,7 +13,6 @@ jobs:
       id : myjsaction
       uses: DevSecOpsCore/core-build@v1.1.6
       with:
-        jPath : "default"
         jName : "devops-settings-example.json"  
     
 

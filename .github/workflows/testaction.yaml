@@ -11,7 +11,7 @@ jobs:
   steps:
     - name : First GitHub Custom Action 
       id : myjsaction
-      uses: DevSecOpsCore/core-build@v1.1.5
+      uses: DevSecOpsCore/core-build@v1.1.6
       with:
         jPath : ""
         jName : "devops-settings-example.json"  

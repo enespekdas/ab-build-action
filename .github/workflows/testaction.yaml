@@ -1,15 +1,14 @@
 on : [push]
 
 jobs: 
- custom-js-action-job:
+ custom-composite-build:
  
   runs-on : ubuntu-latest
   
-  name : Custom JS gitHub Action
-  env:
-    QUAYIO_USERNAME: swoturkey
+  name : Custom Composite Build Action
+
   steps:
-    - name : First GitHub Custom Action 
+    - name : Build Action DevSecOpsCore 
       id : myjsaction
       uses: DevSecOpsCore/core-build@v1.1.9
       with:

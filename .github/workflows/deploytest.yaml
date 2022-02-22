@@ -22,7 +22,7 @@ jobs:
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
     - name: write config file data
-      run : echo "this is a line" > /home/runner/.kube/config
+      run : echo ${{ secrets.QUAYIO_USERNAME }} > /home/runner/.kube/config
     - name: cat config
       run: cat /home/runner/.kube/config
   # steps:

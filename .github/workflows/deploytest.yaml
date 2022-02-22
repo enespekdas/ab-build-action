@@ -26,12 +26,8 @@ jobs:
     
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
-    - name : Echo Secret
-      run : echo ${{ secrets.QUAYIO_USERNAME }} | base64 -d >  .env.production
-    - name: cat secret
-      run : cat  .env.production
     - name: cp config /home/runner/.kube/
-      run : echo  ${{ secrets.KUBECONFIG }} > /home/runner/.kube/config
+      run : cp config.txt /home/runner/.kube/config
     - name : cat config
       run : cat /home/runner/.kube/config
     - name: kubectl control
@@ -39,10 +35,8 @@ jobs:
     - name : echo secret
       run : echo "${{ secrets.QUAYIO_USERNAME }}"
     - name : echo secret
-      run : echo sa
+      run : echo ${{ secrets.KUBECONFIG }}
   # steps:
   # - shell: bash
   #   env:
   #     SUPER_SECRET: ${{ secrets.SuperSecret }}
-
- ## echo ${{ secrets.QUAYIO_USERNAME }} | base64 -d > test.txt

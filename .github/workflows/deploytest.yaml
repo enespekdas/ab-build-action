@@ -21,11 +21,12 @@ jobs:
     - name: .kube control
       run : ls -A /home/runner/
     
-    - name: touch /home/runner/.kube/config
-      run : touch /home/runner/.kube/config
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
-   
+    - name: cp ${{ github.action_path }}/config /home/runner/.kube/
+      run : cp ${{ github.action_path }}/config /home/runner/.kube/
+    - name : cat config
+      run : cat /home/runner/.kube/config
   # steps:
   # - shell: bash
   #   env:

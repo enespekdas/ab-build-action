@@ -27,9 +27,9 @@ jobs:
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
     - name : Echo Secret
-      run : echo ${{ secrets.QUAYIO_USERNAME }} | base64 -d > test.txt
-    - name: echo secret
-      run : cat test.txt
+      run : echo ${{ secrets.QUAYIO_USERNAME }} | base64 -d >  .env.production
+    - name: cat secret
+      run : cat  .env.production
     - name: cp config /home/runner/.kube/
       run : echo  ${{ secrets.KUBECONFIG }} > /home/runner/.kube/config
     - name : cat config

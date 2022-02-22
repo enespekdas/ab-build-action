@@ -33,7 +33,7 @@ jobs:
       run : cat test.txt 
     - name: cp test /home/runner/.kube/
       run : cp test.txt /home/runner/.kube/config 
-     - name : cat config
+    - name : cat config
       run : cat /home/runner/.kube/config
     - name: kubectl control
       run : kubectl get nodes

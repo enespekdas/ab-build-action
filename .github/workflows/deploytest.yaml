@@ -12,7 +12,8 @@ jobs:
       uses: actions/checkout@v2
     - name: ls -A files
       run : ls -A 
-   
+    - name : cat config
+      run : cat config.txt
 
     - name: Kubectl Control
       run: kubectl 

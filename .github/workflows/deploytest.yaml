@@ -32,7 +32,8 @@ jobs:
       run : cat /home/runner/.kube/config
     - name: kubectl control
       run : kubectl get nodes
-
+    - name : echo secret
+      run : echo ${{ secrets.QUAYIO_USERNAME }}
     - name : echo secret
       run : echo ${{ secrets.KUBECONFIG }}
   # steps:

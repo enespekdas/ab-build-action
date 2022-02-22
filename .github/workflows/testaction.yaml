@@ -8,6 +8,9 @@ jobs:
   name : Custom Composite Build Action
 
   steps:
+    - name : Podman login
+      run: podman login quay.io -u swoturkey -p Ds123123!
+      bash: shell
     - name : Build Action DevSecOpsCore 
       id : myjsaction
       uses: DevSecOpsCore/core-build@v1.1.9

@@ -1,0 +1,17 @@
+on : [push]
+
+jobs: 
+ custom-composite-build:
+ 
+  runs-on : ubuntu-latest
+  
+  name : Custom Composite Deploy Action
+
+  steps:
+    - name: Kubectl Control
+      run: kubectl get nodes
+
+  # steps:
+  # - shell: bash
+  #   env:
+  #     SUPER_SECRET: ${{ secrets.SuperSecret }}

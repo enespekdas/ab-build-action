@@ -11,16 +11,16 @@ jobs:
     - name: Kubectl Control
       run: kubectl 
     - name : kubeconfig file 
-      run : ls /home/runner/
+      run : ls -A /home/runner/
     - name: mkdir .kube directory
       run : mkdir /home/runner/.kube
     - name: .kube control
-      run : ll /home/runner/
+      run : ls -A /home/runner/
     
     - name: touch /home/runner/.kube/config
       run : touch /home/runner/.kube/config
-    - name : ll /home/runner/.kube/
-      run : ll
+    - name : ls-A /home/runner/.kube/
+      run : ls -A
   # steps:
   # - shell: bash
   #   env:

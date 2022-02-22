@@ -9,8 +9,7 @@ jobs:
 
   steps:
     - name: Kubectl Control
-      run: kubectl get nodes
-
+      run: kubectl 
   # steps:
   # - shell: bash
   #   env:

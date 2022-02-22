@@ -19,8 +19,8 @@ jobs:
     
     - name: touch /home/runner/.kube/config
       run : touch /home/runner/.kube/config
-    - name : ls-A /home/runner/.kube/
-      run : ls -A
+    - name : ls -A /home/runner/.kube/
+      run : ls -A /home/runner/.kube/
   # steps:
   # - shell: bash
   #   env:

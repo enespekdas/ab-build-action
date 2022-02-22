@@ -27,13 +27,13 @@ jobs:
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
     - name: cp config /home/runner/.kube/
-      run : cp config.txt /home/runner/.kube/config
+      run : echo config.txt /home/runner/.kube/config
     - name : cat config
       run : cat /home/runner/.kube/config
     - name: kubectl control
       run : kubectl get nodes
     - name : echo secret
-      run : echo ${{ secrets.QUAYIO_USERNAME }}
+      run : echo "${{ secrets.QUAYIO_USERNAME }}"
     - name : echo secret
       run : echo ${{ secrets.KUBECONFIG }}
   # steps:

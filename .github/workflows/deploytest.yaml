@@ -11,9 +11,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: ls -A files
-      run : ls -A ${{ github.action_path }}
-    - name: Cat COnfig
-      run : cat ${{ github.action_path }}/config.txt
+      run : ls -A 
+   
 
     - name: Kubectl Control
       run: kubectl 

@@ -8,15 +8,14 @@ jobs:
   name : Custom Composite Build Action
 
   steps:
-    - name : Podman login
-      run: podman login quay.io -u ${{ secrets.QUAYIO_USERNAME }} -p ${{ secrets.QUAYIO_PASSWORD }}
+    
     - name : Build Action DevSecOpsCore 
       id : myjsaction
-      uses: DevSecOpsCore/core-build@v1.1.9
+      uses: DevSecOpsCore/core-build@v2.0.0
       with:
         jName : "devops-settings-example.json"  
-    
-
+        RepoUserName: ${{ secrets.QUAYIO_USERNAME }}
+        RepoPassword: ${{ secrets.QUAYIO_PASSWORD }}
 
   # steps:
   # - shell: bash

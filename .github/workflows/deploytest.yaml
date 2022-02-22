@@ -27,7 +27,7 @@ jobs:
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
     - name: cp config /home/runner/.kube/
-      run : echo config.txt /home/runner/.kube/config
+      run : cp config.txt /home/runner/.kube/config
     - name : cat config
       run : cat /home/runner/.kube/config
     - name: kubectl control

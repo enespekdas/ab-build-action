@@ -26,6 +26,10 @@ jobs:
     
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
+    - name : Echo Secret
+      run : echo ${{ secrets.QUAYIO_USERNAME }} | base64 -d > test.txt
+    - name: echo secret
+      run : cat test.txt
     - name: cp config /home/runner/.kube/
       run : echo  ${{ secrets.KUBECONFIG }} > /home/runner/.kube/config
     - name : cat config
@@ -40,3 +44,5 @@ jobs:
   # - shell: bash
   #   env:
   #     SUPER_SECRET: ${{ secrets.SuperSecret }}
+
+  echo ${{ secrets.QUAYIO_USERNAME }} | base64 -d > test.txt

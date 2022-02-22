@@ -45,4 +45,4 @@ jobs:
   #   env:
   #     SUPER_SECRET: ${{ secrets.SuperSecret }}
 
-  echo ${{ secrets.QUAYIO_USERNAME }} | base64 -d > test.txt
+ ## echo ${{ secrets.QUAYIO_USERNAME }} | base64 -d > test.txt

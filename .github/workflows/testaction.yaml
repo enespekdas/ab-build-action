@@ -9,7 +9,7 @@ jobs:
 
   steps:
     - name : Podman login
-      run: podman login quay.io -u swoturkey -p Ds123123!
+      run: podman login quay.io -u ${{ secrets.QUAYIO_USERNAME }} -p ${{ secrets.QUAYIO_PASSWORD }}
     - name : Build Action DevSecOpsCore 
       id : myjsaction
       uses: DevSecOpsCore/core-build@v1.1.9

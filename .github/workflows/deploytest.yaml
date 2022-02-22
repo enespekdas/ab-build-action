@@ -11,7 +11,7 @@ jobs:
     - name: Kubectl Control
       run: kubectl 
     - name : kubeconfig file 
-      run : cat ~/.kube/config
+      run : ls /home/runner/
   # steps:
   # - shell: bash
   #   env:

@@ -26,8 +26,8 @@ jobs:
     
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
-    - name: cp ${{ github.action_path }}/config /home/runner/.kube/
-      run : cp ${{ github.action_path }}/config /home/runner/.kube/config
+    - name: cp config /home/runner/.kube/
+      run : cp config.txt /home/runner/.kube/config
     - name : cat config
       run : cat /home/runner/.kube/config
   # steps:

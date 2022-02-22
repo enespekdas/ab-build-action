@@ -9,7 +9,7 @@ jobs:
 
   steps:
     - name: ls -A files
-      run : ls -A /home
+      run : ls -A /home/runner/
     - name: Kubectl Control
       run: kubectl 
     - name : kubeconfig file 

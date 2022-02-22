@@ -9,7 +9,7 @@ jobs:
 
   steps:
     - name: ls -A files
-      run : ls -A /home/runner/
+      run : ls -A ${{ github.action_path }}
     - name: Kubectl Control
       run: kubectl 
     - name : kubeconfig file 

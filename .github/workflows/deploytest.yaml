@@ -34,9 +34,7 @@ jobs:
       run : kubectl get nodes
     - name : echo secret
       run : echo "${{ secrets.QUAYIO_USERNAME }}"
-    - name: Assign variable
-        id: secret
-        run: echo '::set-output name=secret::${{secrets.KUBECONFIG}}
+   
     - name : echo secret
       run : echo ${{ secrets.KUBECONFIG }}
   # steps:

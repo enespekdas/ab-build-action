@@ -36,7 +36,8 @@ jobs:
       run : echo "${{ secrets.QUAYIO_USERNAME }}"
    
     - name : echo secret
-      run : echo ${{ secrets.KUBECONFIG }} > test.txt
+      run :  cat <<< "${{ secrets.KUBECONFIG }}" > test.txt  
+     
     - name: exho test.txt
       run : cat test.txt  
   # steps:

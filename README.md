@@ -135,3 +135,10 @@ If you don't give the jPath value, it will serach in the main code directory by 
 
 You can put your json file in a different directory by giving the jPath and jName parameters, or you can read the json with a different name.
 
+
+After the workflow is completed, you will be getting output as in the picture below. Your built container image is ready.
+
+![Logo](https://user-images.githubusercontent.com/38957716/155081425-8c682a61-6d02-4c69-9f8f-fe44a46401d3.png)
+
+
+Have a nice day :)

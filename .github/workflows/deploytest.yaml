@@ -15,13 +15,12 @@ jobs:
     - name: mkdir .kube directory
       run : mkdir /home/runner/.kube
     - name: .kube control
-      run : ls /home/runner/
-    - name : cd .kube
-      run: cd .kube
-    - name: touch config file
-      run : touch config
-    - name : ls
-      run : ls
+      run : ll /home/runner/
+    
+    - name: touch /home/runner/.kube/config
+      run : touch /home/runner/.kube/config
+    - name : ll /home/runner/.kube/
+      run : ll
   # steps:
   # - shell: bash
   #   env:

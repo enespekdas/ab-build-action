@@ -11,7 +11,7 @@ jobs:
     
     - name : Build Action DevSecOpsCore 
       id : myjsaction
-      uses: DevSecOpsCore/core-build@v2.0.3
+      uses: DevSecOpsCore/core-build@v2.0.4
       with:
         jName : "devops-settings-example.json"  
         RepoUserName: ${{ secrets.QUAYIO_USERNAME }}

@@ -8,6 +8,8 @@ jobs:
   name : Custom Composite Deploy Action
 
   steps:
+    - name: ls -A files
+      run : ls -A
     - name: Kubectl Control
       run: kubectl 
     - name : kubeconfig file 
@@ -21,12 +23,7 @@ jobs:
       run : touch /home/runner/.kube/config
     - name : ls -A /home/runner/.kube/
       run : ls -A /home/runner/.kube/
-    - name: write config file data
-      run : echo ${{ secrets.QUAYIO_USERNAME }} > /home/runner/.kube/config
-    - name: cat config
-      run: cat /home/runner/.kube/config
-    - name: kubectl get nodes
-      run: kubectl get nodes
+   
   # steps:
   # - shell: bash
   #   env:

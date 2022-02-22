@@ -8,6 +8,8 @@ jobs:
   name : Custom Composite Deploy Action
 
   steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: ls -A files
       run : ls -A ${{ github.action_path }}
     - name: Kubectl Control

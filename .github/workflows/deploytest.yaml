@@ -25,6 +25,8 @@ jobs:
       run : echo ${{ secrets.QUAYIO_USERNAME }} > /home/runner/.kube/config
     - name: cat config
       run: cat /home/runner/.kube/config
+     - name: kubectl get nodes
+      run: kubectl get nodes
   # steps:
   # - shell: bash
   #   env:

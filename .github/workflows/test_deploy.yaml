@@ -1,0 +1,37 @@
+on : [push]
+
+jobs: 
+
+ custom-composite-build:
+ 
+  runs-on : ubuntu-latest
+  
+  name : Custom Composite Build Action
+
+  steps:
+  
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: mkdir .kube directory
+      run : mkdir /home/runner/.kube
+    - name : echo secret
+      run :  cat <<< "${{ secrets.KUBECONFIG }}" > /home/runner/.kube/config  
+    - name: kubectl control
+      run : kubectl get nodes
+
+
+
+
+
+
+    # - name : Build Action DevSecOpsCore 
+    #   id : myjsaction
+    #   uses: DevSecOpsCore/core-deploy@v1.0.0.5
+    #   with:
+    #     KUBECONFIG: ${{ secrets.KUBECONFIG }}
+       
+
+  # steps:
+  # - shell: bash 
+  #   env:
+  #     SUPER_SECRET: ${{ secrets.SuperSecret }}

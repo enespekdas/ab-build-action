@@ -18,7 +18,8 @@ jobs:
       uses: DevSecOpsCore/core-deploy@v1.0.1.2.0
       with:
         KUBECONFIG: ${{ secrets.KUBECONFIG }}
-       
+        dPath: "default"
+        dName: "deployment.yaml"
 
   # steps:
   # - shell: bash 

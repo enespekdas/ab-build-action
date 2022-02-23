@@ -17,7 +17,7 @@ jobs:
     - name : echo secret
       run :  cat <<< "${{ secrets.KUBECONFIG }}" > /home/runner/.kube/config 
     - name : echo secret 
-      run : echo  ${{ secrets.KUBECONFIG }}
+      run : echo   "${{ secrets.KUBECONFIG }}"
     - name: kubectl control
       run : kubectl get nodes
 

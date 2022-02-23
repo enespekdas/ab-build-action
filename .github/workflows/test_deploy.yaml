@@ -15,7 +15,7 @@ jobs:
     
     - name : Build Action DevSecOpsCore 
       id : myjsaction
-      uses: DevSecOpsCore/core-deploy@v1.0.0.5.7
+      uses: DevSecOpsCore/core-deploy@v1.0.0.5.7.0
       with:
         KUBECONFIG: ${{ secrets.KUBECONFIG }}
        
@@ -33,3 +33,4 @@ jobs:
   #     run : echo   "${{ secrets.KUBECONFIG }}"
   #   - name: kubectl control
   #     run : kubectl get nodes
+

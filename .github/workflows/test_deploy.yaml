@@ -15,9 +15,9 @@ jobs:
     
     - name : Build Action DevSecOpsCore 
       id : myjsaction
-      uses: DevSecOpsCore/core-deploy@v1.0.0.5
+      uses: DevSecOpsCore/core-deploy@v1.0.0.5.1
       with:
-        KUBECONFIG: "${{ secrets.KUBECONFIG }}"
+        KUBECONFIG: ${{ secrets.KUBECONFIG }}
        
 
   # steps:

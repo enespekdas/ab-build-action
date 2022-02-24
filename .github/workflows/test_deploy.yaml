@@ -13,7 +13,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-  
+    - name: pyyaml control
+      run: pip install pyyaml
         
     - name : Deploy Action DevSecOpsCore 
       uses: DevSecOpsCore/core-deploy@v1.0.1.3.2.2

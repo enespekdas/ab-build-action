@@ -21,17 +21,3 @@ jobs:
         dPath: "default"
         dName: "deployment.yaml"
 
-  # steps:
-  # - shell: bash 
-  #   env:
-  #     SUPER_SECRET: ${{ secrets.SuperSecret }}
-
-  # - name: mkdir .kube directory
-  #     run : mkdir /home/runner/.kube
-  #   - name : echo secret
-  #     run :  cat <<< "${{ secrets.KUBECONFIG }}" > /home/runner/.kube/config 
-  #   - name : echo secret 
-  #     run : echo   "${{ secrets.KUBECONFIG }}"
-  #   - name: kubectl control
-  #     run : kubectl get nodes
-

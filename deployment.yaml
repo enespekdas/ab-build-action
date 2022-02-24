@@ -16,7 +16,7 @@ spec:
         app: demo
     spec:
       containers:
-      - image: quay.io/altug_yildirim/java-demo:v1 
+      - image: quay.io/swoturkey/dev-sec-ops-core-build:v1
         name: demo
         resources: {}
 status: {}
